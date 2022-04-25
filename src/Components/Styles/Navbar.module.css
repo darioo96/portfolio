@@ -23,6 +23,11 @@
     justify-content: space-around;
 }
 
+span {
+    visibility: hidden;
+    color: white;
+}
+
 .container .logo h1 {
     color: rgba(255, 255, 255, 0.79);
     font-family: 'BenchNine', sans-serif;
@@ -52,12 +57,46 @@
     margin: auto;
 }
 
-.container .links ul li a {
+.container .links ul li p {
     font-family: 'Raleway', sans-serif;
     font-size: 2.7vh;
     color: rgba(255, 255, 255, 0.79);
+    cursor: pointer;
 }
 
 a {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .container .logo {
+        width: 100%;
+        justify-content: center;
+    }
+    .container .links:active {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.993);
+        visibility: visible;
+        z-index: -2;
+    }
+    .container .links ul {
+        display: grid;
+        justify-content: center;
+    }
+    .container .links ul li {
+        margin-bottom: 5vh;
+    }
+    .container span {
+        position: absolute;
+        visibility: visible;
+        font-size: 7vh;
+    }
 }
