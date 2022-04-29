@@ -7,7 +7,7 @@ export default function Navbar() {
     <div className={styles.container}>
         <div className={styles.ban}></div>
         <div className={styles.logo}>
-            <Link activeClass="active" to="home" spy={true} smooth={true} offset={-250} duration={500} delay={100}><h1>{"<DO/>"}</h1></Link>
+            <Link activeClass="active" to="home" spy={true} smooth={true} offset={-1250} duration={500} delay={100}><h1>{"<DO/>"}</h1></Link>
         </div>
         <span className="material-symbols-outlined">
           menu
