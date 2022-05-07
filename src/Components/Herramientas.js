@@ -3,6 +3,6 @@ import styles from "./Styles/Herramientas.module.css"
 
 export default function Herramientas() {
   return (
-    <div className={styles.container} id="Herramientas">Herramientas</div>
+    <section className={styles.container} id="Herramientas">Herramientas</section>
   )
 }

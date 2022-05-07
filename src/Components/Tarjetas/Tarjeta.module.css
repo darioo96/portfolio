@@ -1,0 +1,77 @@
+@import url('https://css.gg/link.css');
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta {
+    position: relative;
+    width: 55vh;
+    height: 40vh;
+}
+
+.tarjeta .cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.tarjeta .frente {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px black;
+}
+
+.tarjeta .frente img {
+    position: absolute;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.tarjeta .frente h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 45px;
+    color: white;
+    background: rgba(4, 3, 3, 0.711);
+    text-align: center;
+    z-index: 1;
+    margin: 0;
+}
+
+.tarjeta .atras {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.tarjeta:hover .frente {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.tarjeta:hover .atras {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.link {
+    height: 15%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link a {
+    transform: scale(1.2);
+    color: aliceblue;
+}

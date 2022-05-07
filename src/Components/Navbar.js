@@ -7,19 +7,17 @@ const clickMenu = () =>{
   var anchoPantalla = window.innerWidth;
   if(anchoPantalla <= 768){
       if (auxLink.style.transform === "translateX(100vh)") {
-      auxLink.style.transform = "translateX(0vh)";
+        auxLink.style.transform = "translateX(0vh)";
+      }
+    else{
+      auxLink.style.transform = "translateX(100vh)";
+    }
   }
-  else{
-    auxLink.style.transform = "translateX(100vh)";
-
-  }
-  }
-
 }
 
 export default function Navbar() {
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
         <div className={styles.ban}></div>
         <div className={styles.logo}>
             <Link activeClass="active" to="home" spy={true} smooth={true} offset={-1250} duration={500} delay={100}><h1>{"<DO/>"}</h1></Link>
@@ -34,6 +32,6 @@ export default function Navbar() {
             <li><Link onClick={clickMenu} activeClass="active" to="Herramientas" spy={true} smooth={true} offset={3} duration={500} delay={100}>Herramientas</Link></li>
           </ul>
         </div>
-    </div>
+    </nav>
   )
 }
